@@ -1,0 +1,31 @@
+<div class="page-header">
+    <h2>Task tracker
+        <h5 class='inline'>cory</h5>
+    </h2>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Tasks</div>
+    <div class="panel-body">
+        <app-task
+            *ngFor="let item of tasks"
+            [task]='item'
+            ></app-task>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Job Detail
+        <div class="btn-group btn-group-sm" role="group">
+            <button type="button" class="btn btn-default" (click)="doQuery2()">
+                <span class=" glyphicon glyphicon-refresh" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+    <div class="panel-body">
+        detail
+    </div>
+</div>
+<!--<button type="button" class="btn btn-default btn-lg" (click)="doQuery2()">
+     <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+</button>-->
