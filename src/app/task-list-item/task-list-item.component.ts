@@ -1,11 +1,13 @@
 
 import { Component, Input } from '@angular/core';
 import { Task } from '../shared';
+import { expendAnimation } from '../shared';
 
 @Component({
     selector: 'app-task',
     templateUrl: './task-list-item.component.html',
-    styleUrls: ['./task-list-item.component.css']
+    styleUrls: ['./task-list-item.component.css'],
+    animations: [expendAnimation('expendAnimation')]
 })
 export class TaskListItemComponent {
 
@@ -13,6 +15,8 @@ export class TaskListItemComponent {
 
 
     editing: boolean = false;
+
+    recordExpended: boolean = false;
 
     constructor() {
 
@@ -33,5 +37,18 @@ export class TaskListItemComponent {
     {
         let a_elm = <HTMLElement> $event.target;
         this.task.period = a_elm.innerText;
+        $event.preventDefault();
+    }
+
+    /** 展開新增記錄 */
+    expendRecord()
+    {
+        this.recordExpended = true;
+    }
+
+    /** 確認新增記錄 */
+    addRecord()
+    {
+        this.recordExpended = false;
     }
 }

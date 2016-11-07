@@ -18,6 +18,11 @@ h5.inline {
     color: gray;
 }
 
-.btn-toolbar {
+.btn-toolbar, .btn-group, .input-group {
     margin: 5px 0;
+}
+
+.sub-panel {
+    margin-left: 4em;
+    overflow: hidden;
 }
