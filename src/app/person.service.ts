@@ -6,5 +6,4 @@ export class PersonService {
 
     /** 目前登入者的 ldap 帳號 */
     account: string;
-
 }

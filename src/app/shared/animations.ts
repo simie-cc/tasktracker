@@ -2,11 +2,11 @@
 import { trigger, animate, style, transition } from '@angular/core';
 
 export function expendAnimation(name) {
-    return routeAnimation_5(name);
+    return animation_5(name);
 }
 
 export function routeAnimation(name) {
-    return routeAnimation_4(name);
+    return animation_4(name);
 }
 
 function startingStyles(styles: Object) {
@@ -18,7 +18,7 @@ function startingStyles(styles: Object) {
     });
 }
 
-function routeAnimation_1(name) {
+function animation_1(name) {
     return trigger(name, [
         transition('void => *', [
             style(startingStyles({
@@ -35,7 +35,7 @@ function routeAnimation_1(name) {
     ]);
 }
 
-function routeAnimation_2(name) {
+function animation_2(name) {
     return trigger(name, [
         transition('void => *', [
             style(startingStyles({ transform: 'translateX(100%)' })),
@@ -48,7 +48,7 @@ function routeAnimation_2(name) {
     ]);
 }
 
-function routeAnimation_3(name) {
+function animation_3(name) {
     return trigger(name, [
         transition('void => *', [
             style(startingStyles({ transform: 'scale(1.2)', opacity: 0.5 })),
@@ -61,7 +61,7 @@ function routeAnimation_3(name) {
     ]);
 }
 
-function routeAnimation_4(name) {
+function animation_4(name) {
     return trigger(name, [
         transition('void => *', [
             style(startingStyles({
@@ -79,7 +79,7 @@ function routeAnimation_4(name) {
     ]);
 }
 
-function routeAnimation_5(name) {
+function animation_5(name) {
     return trigger(name, [
         transition('void => *', [
             style({ height: 0 }),
